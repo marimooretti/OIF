@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090B09" />
+    <meta name="description" content="Orienta IF — protótipo de apoio à melhoria da educação por meio da escuta estudantil." />
+    <title>Orienta IF — Escuta que orienta</title>
+    <script>
+      try {
+        if (window.localStorage.getItem('orienta-theme') === 'light') {
+          document.documentElement.dataset.theme = 'light'
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#F5F7F0')
+        }
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
