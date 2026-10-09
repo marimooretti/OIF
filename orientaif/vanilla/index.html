@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090B09" />
+  <meta name="description" content="Orienta IF — protótipo de apoio à melhoria da educação por meio da escuta estudantil." />
+  <title>Orienta IF — Escuta que orienta</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    try {
+      if (window.localStorage.getItem('orienta-theme') === 'light') {
+        document.documentElement.dataset.theme = 'light';
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+      <div class="header-inner">
+        <button class="brand" type="button" data-route="home" aria-label="Orienta IF — ir para a página inicial">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M6 23.5V8.5L16 4l10 4.5v15L16 28 6 23.5Z" stroke="currentColor" stroke-width="1.8" />
+              <path d="M11 12.2 16 9.8l5 2.4v7.6L16 22l-5-2.2v-7.6Z" fill="currentColor" opacity=".85" />
+              <path d="M16 4v5.8M6 8.5l5 3.7M26 8.5l-5 3.7M16 22v6" stroke="currentColor" stroke-width="1.25" opacity=".75" />
+            </svg>
+          </span>
+          <span class="brand-wordmark"><strong>Orienta</strong><em>IF</em></span>
+        </button>
+        <nav class="primary-nav" aria-label="Navegação principal">
+          <button class="nav-link" type="button" data-route="home">Início</button>
+          <button class="nav-link" type="button" data-route="evaluation">Avaliação</button>
+          <button class="nav-link" type="button" data-route="about">Sobre</button>
+          <button class="nav-link" type="button" data-route="dashboard">Visão institucional</button>
+          <button class="nav-link" type="button" data-route="recommendations">Recomendações</button>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Ativar modo claro" title="Ativar modo claro">
+            <span id="theme-icon">☀</span><span id="theme-label">Claro</span>
+          </button>
+          <button class="header-cta" type="button" data-route="evaluation">Avaliar professor</button>
+          <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">☰</button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="mobile-nav" aria-label="Navegação móvel" hidden>
+        <button class="mobile-nav-link" type="button" data-route="home">Início</button>
+        <button class="mobile-nav-link" type="button" data-route="evaluation">Avaliação</button>
+        <button class="mobile-nav-link" type="button" data-route="about">Sobre</button>
+        <button class="mobile-nav-link" type="button" data-route="dashboard">Visão institucional</button>
+        <button class="mobile-nav-link" type="button" data-route="recommendations">Recomendações</button>
+        <button class="mobile-evaluate" type="button" data-route="evaluation">Avaliar professor</button>
+      </nav>
+    </header>
+
+    <main id="main-content" class="main-content" tabindex="-1">
+
+      <!-- INÍCIO -->
+      <div data-view="home">
+        <section class="hero-section section-shell">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span>Escuta estudantil, com propósito</div>
+            <h1>Uma educação melhor começa com a <span>escuta.</span></h1>
+            <p class="hero-lead">O Orienta IF transforma percepções dos estudantes em informações que ajudam a identificar necessidades e orientar melhorias no ambiente educacional.</p>
+            <div class="hero-actions">
+              <button class="button button-primary" type="button" data-route="evaluation">Avaliar professor →</button>
+              <button class="button button-quiet" type="button" data-route="about">Conhecer o projeto</button>
+            </div>
+            <div class="hero-reassurance"><span aria-hidden="true">🔒</span><span>Protótipo com orientações de privacidade e sem envio institucional real.</span></div>
+          </div>
+          <div class="hero-visual" aria-label="Representação visual do processo de escuta, análise e orientação">
+            <div class="signal-grid" aria-hidden="true"></div>
+            <div class="orbit orbit-one" aria-hidden="true"></div>
+            <div class="orbit orbit-two" aria-hidden="true"></div>
+            <div class="visual-card visual-card-main">
+              <div class="visual-card-top"><span>MAPA DE ESCUTA</span><span class="status-light">ATIVO</span></div>
+              <div class="visual-line"><span>Perspectivas</span><strong>organizadas</strong></div>
+              <div class="signal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="visual-card-bottom"><span>Leitura coletiva</span><span>Etapa futura</span></div>
+            </div>
+            <div class="visual-card visual-card-small"><span aria-hidden="true">✦</span><span>Melhoria começa aqui</span></div>
+            <div class="hero-seal"><span aria-hidden="true">◉</span><span>ORIENTA<br />IF</span></div>
+          </div>
+        </section>
+
+        <section class="process-section section-shell" aria-labelledby="process-title">
+          <div class="section-heading split-heading">
+            <div>
+              <div class="eyebrow">Um ciclo para orientar</div>
+              <h2 id="process-title">Da experiência à possibilidade de melhoria.</h2>
+            </div>
+            <p>O desenho do produto prioriza uma experiência clara para estudantes e uma leitura institucional responsável dos dados agregados.</p>
+          </div>
+          <div class="process-rail">
+            <article class="process-item">
+              <div class="process-index">01</div>
+              <div class="process-icon" aria-hidden="true">◈</div>
+              <h3>Escuta</h3>
+              <p>Os estudantes compartilham suas experiências acadêmicas de forma respeitosa e orientada.</p>
+            </article>
+            <article class="process-item">
+              <div class="process-index">02</div>
+              <div class="process-icon" aria-hidden="true">▤</div>
+              <h3>Análise</h3>
+              <p>As respostas são organizadas para ajudar a identificar necessidades de maneira agregada.</p>
+            </article>
+            <article class="process-item">
+              <div class="process-index">03</div>
+              <div class="process-icon" aria-hidden="true">◎</div>
+              <h3>Orientação</h3>
+              <p>As informações podem apoiar propostas de melhoria e acompanhamento pedagógico.</p>
+            </article>
+          </div>
+          <p class="future-note"><span aria-hidden="true">✦</span>A análise por inteligência artificial é uma possibilidade prevista para uma etapa futura. Nesta demonstração, não há IA conectada.</p>
+        </section>
+
+        <section class="project-section section-shell" aria-labelledby="project-title">
+          <div class="project-panel">
+            <div class="project-symbol" aria-hidden="true">✓</div>
+            <div>
+              <div class="eyebrow">Tecnologia educacional</div>
+              <h2 id="project-title">Escutar com cuidado é parte de melhorar com responsabilidade.</h2>
+            </div>
+            <p>O Orienta IF é uma proposta de interface para apoiar a melhoria institucional. Ele foi pensado para separar visualmente contexto acadêmico e respostas, evitando que percepções individuais sejam apresentadas como perfis pessoais.</p>
+            <button class="text-link" type="button" data-route="about">Entender princípios e limites do protótipo →</button>
+          </div>
+        </section>
+
+        <section class="closing-section section-shell">
+          <div class="closing-copy">
+            <div class="eyebrow">Sua experiência importa</div>
+            <h2>Participe de uma escuta que respeita o contexto e aponta caminhos.</h2>
+          </div>
+          <button class="button button-primary" type="button" data-route="evaluation">Iniciar avaliação →</button>
+        </section>
+      </div>
+
+      <!-- AVALIAÇÃO -->
+      <div data-view="evaluation" hidden>
+        <section class="evaluation-page section-shell" id="eval-form-section">
+          <div class="form-header">
+            <div>
+              <div class="eyebrow">Avaliação demonstrativa</div>
+              <h1 id="eval-title">Vamos começar.</h1>
+            </div>
+            <div class="form-header-note"><span aria-hidden="true">🔒</span><span>Não há envio institucional nesta versão.</span></div>
+          </div>
+
+          <ol class="progress-steps" id="progress-steps" aria-label="Etapa 1 de 3">
+            <li data-progress="1"><button type="button" data-goto-step="1"><span>1</span><strong>Etapa 1</strong><em>Informações acadêmicas</em></button></li>
+            <li data-progress="2"><button type="button" data-goto-step="2" disabled><span>2</span><strong>Etapa 2</strong><em>Avaliação do professor</em></button></li>
+            <li data-progress="3"><button type="button" data-goto-step="3" disabled><span>3</span><strong>Etapa 3</strong><em>Revisão e envio</em></button></li>
+          </ol>
+
+          <form id="eval-form" novalidate>
+            <div class="form-card">
+              <div class="step-content" data-step="1">
+                <div class="step-intro"><p>Informe seus dados acadêmicos para contextualizar a avaliação.</p><span>Todos os campos são obrigatórios nesta demonstração.</span></div>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="f-studentName">Nome do estudante</label>
+                    <input id="f-studentName" name="studentName" placeholder="Como deseja ser identificado no contexto acadêmico?" />
+                    <p class="field-error" data-error-for="f-studentName" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="f-course">Curso</label>
+                    <input id="f-course" name="course" placeholder="Ex.: Técnico em Informática" />
+                    <p class="field-error" data-error-for="f-course" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="f-classGroup">Turma</label>
+                    <input id="f-classGroup" name="classGroup" placeholder="Ex.: 2º ano A" />
+                    <p class="field-error" data-error-for="f-classGroup" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="f-teacher">Professor avaliado</label>
+                    <input id="f-teacher" name="teacher" placeholder="Nome do professor" />
+                    <p class="field-error" data-error-for="f-teacher" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="f-subject">Disciplina</label>
+                    <input id="f-subject" name="subject" placeholder="Ex.: Desenvolvimento Web" />
+                    <p class="field-error" data-error-for="f-subject" hidden></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step-content" data-step="2" hidden>
+                <div class="step-intro"><p>Avalie sua experiência com o professor de forma respeitosa e compartilhe pontos que possam ajudar a melhorar o ensino.</p><span>Use a escala de 1 (Muito ruim) a 5 (Excelente).</span></div>
+                <div class="rating-list" id="rating-list"></div>
+                <div class="comment-field">
+                  <label for="f-comment">💬 Quer explicar melhor sua avaliação? <span>Opcional</span></label>
+                  <p>Compartilhe sua experiência, indicando o que funciona bem e o que poderia melhorar. Evite incluir nomes de outros estudantes ou informações pessoais de terceiros.</p>
+                  <textarea id="f-comment" maxlength="700" placeholder="Escreva aqui, se desejar..."></textarea>
+                  <div class="character-count"><span id="comment-count">0</span>/700 caracteres</div>
+                </div>
+              </div>
+
+              <div class="step-content" data-step="3" hidden>
+                <div class="step-intro"><p>Confira as informações antes de concluir esta experiência demonstrativa.</p><span>Você pode voltar e corrigir qualquer campo.</span></div>
+                <div class="review-columns">
+                  <section class="review-block">
+                    <div class="review-title"><div><span>01</span><h2>Identificação e contexto</h2></div><button type="button" data-goto-step="1">✎ Editar</button></div>
+                    <dl id="review-context"></dl>
+                  </section>
+                  <section class="review-block">
+                    <div class="review-title"><div><span>02</span><h2>Respostas da avaliação</h2></div><button type="button" data-goto-step="2">✎ Editar</button></div>
+                    <dl id="review-ratings"></dl>
+                    <div class="review-comment" id="review-comment-wrap" hidden><strong>Comentário opcional</strong><p id="review-comment"></p></div>
+                  </section>
+                </div>
+                <aside class="privacy-notice"><span aria-hidden="true">🔒</span><div><h2>Sobre anonimato nesta demonstração</h2><p>Seu nome e suas informações acadêmicas são usados aqui apenas para contextualizar o fluxo visual. No sistema final, dados de identificação e respostas deverão ser armazenados e processados separadamente, com controles técnicos para impedir a associação de cada comentário a quem o escreveu.</p><p>Este protótipo <strong>não implementa essa separação técnica</strong> e não realiza envio institucional real.</p></div></aside>
+                <label class="privacy-check" id="privacy-label">
+                  <input type="checkbox" id="f-privacy" />
+                  <span><strong>Li e compreendi o aviso de privacidade e os limites desta demonstração.</strong><small>O botão de envio só registra uma confirmação visual neste navegador.</small></span>
+                </label>
+                <p class="field-error" id="privacy-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <span id="back-slot"></span>
+              <button class="button button-primary" type="submit" id="eval-next">Continuar →</button>
+            </div>
+            <p class="field-error" id="submit-error" hidden></p>
+          </form>
+        </section>
+
+        <section class="success-view section-shell" id="eval-success" hidden>
+          <div class="success-icon">✓</div>
+          <div class="eyebrow">Envio demonstrativo concluído</div>
+          <h1>Avaliação registrada na demonstração.</h1>
+          <p id="success-text">Obrigado por contribuir com uma educação melhor. Nenhuma análise por IA foi realizada.</p>
+          <div class="success-actions">
+            <button class="button button-primary" type="button" data-route="home">Voltar ao início</button>
+            <button class="button button-quiet" type="button" data-route="dashboard">Ver visão demonstrativa</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- SOBRE -->
+      <div data-view="about" hidden>
+        <section class="page-section section-shell about-page">
+          <div class="page-hero">
+            <div class="eyebrow">Sobre o Orienta IF</div>
+            <h1>Uma interface para transformar escuta em <span>compreensão responsável.</span></h1>
+            <p>O Orienta IF é um projeto de tecnologia educacional voltado ao apoio da melhoria institucional. Esta versão apresenta somente o fluxo visual e os princípios da experiência.</p>
+          </div>
+          <div class="principles-layout">
+            <aside class="side-label"><span>PRINCÍPIOS<br />DO PROJETO</span></aside>
+            <div class="principles-content">
+              <article class="principle-card feature-card">
+                <div class="feature-icon" aria-hidden="true">▦</div>
+                <div><h2>Contexto não é conteúdo da avaliação</h2><p>Nome, turma, curso, professor e disciplina ajudam a contextualizar a experiência, mas não devem ser associados às notas e aos comentários exibidos em análises futuras.</p></div>
+              </article>
+              <article class="principle-card feature-card warning-card">
+                <div class="feature-icon" aria-hidden="true">⚠</div>
+                <div><h2>O front-end não garante anonimato sozinho</h2><p>Esta demonstração não realiza coleta, transmissão ou armazenamento institucional. O anonimato depende de controles de backend, regras de acesso e testes técnicos que ainda não fazem parte desta etapa.</p></div>
+              </article>
+            </div>
+          </div>
+          <div class="commitment-grid">
+            <article class="commitment-card"><div aria-hidden="true">👁‍🗨</div><h3>Separação necessária</h3><p>No sistema final, identificação e contexto acadêmico devem ser processados separadamente das notas e comentários.</p></article>
+            <article class="commitment-card"><div aria-hidden="true">👥</div><h3>Leitura agregada</h3><p>A visão institucional deve priorizar tendências e grupos, nunca perfis individuais ou comentários atribuídos a estudantes.</p></article>
+            <article class="commitment-card"><div aria-hidden="true">🛡</div><h3>Revisão humana</h3><p>Qualquer recomendação futura precisa de revisão pedagógica antes de orientar decisões ou intervenções.</p></article>
+          </div>
+          <section class="about-cta" aria-label="Participar da demonstração">
+            <div><div class="eyebrow">Pronto para conhecer o fluxo?</div><h2>Experimente a avaliação demonstrativa.</h2></div>
+            <button class="button button-primary" type="button" data-route="evaluation">Avaliar professor →</button>
+          </section>
+        </section>
+      </div>
+
+      <!-- PAINEL -->
+      <div data-view="dashboard" hidden>
+        <section class="dashboard-page section-shell">
+          <div class="dashboard-header">
+            <div><div class="eyebrow">Ambiente separado da experiência estudantil</div><h1>Visão institucional</h1><p>Visualização demonstrativa de necessidades identificadas a partir de avaliações acadêmicas.</p></div>
+            <div class="demo-badge"><span aria-hidden="true">⚠</span><span id="dashboard-badge">Dados fictícios · demonstração</span></div>
+          </div>
+          <div class="metric-grid">
+            <article class="metric-card"><div class="metric-icon" aria-hidden="true">👥</div><span>Total de avaliações</span><strong id="m-total">148</strong><small id="m-total-sub">fictícias, para demonstração</small></article>
+            <article class="metric-card"><div class="metric-icon" aria-hidden="true">📋</div><span>Categorias identificadas</span><strong>03</strong><small>temas demonstrativos</small></article>
+            <article class="metric-card"><div class="metric-icon" aria-hidden="true">▤</div><span id="m-menor-label">Menor média fictícia</span><strong id="m-menor">2,8</strong><small id="m-menor-sub">clareza de critérios</small></article>
+            <article class="metric-card"><div class="metric-icon" aria-hidden="true">💡</div><span>Recomendações</span><strong>03</strong><small>simuladas e revisáveis</small></article>
+          </div>
+          <div class="dashboard-grid">
+            <section class="chart-card" aria-labelledby="average-chart-title"><div class="chart-title"><div><span class="card-kicker">Médias por critério</span><h2 id="average-chart-title">Percepção agregada simulada</h2></div><span class="scale-label">Escala 1–5</span></div><div class="bar-chart" id="chart-medias" role="img" aria-label="Gráfico de médias por critério, escala de 1 a 5."></div><p class="chart-caption" id="cap-medias">Médias locais e fictícias. Não representam resultados oficiais do IFTO.</p></section>
+            <section class="chart-card distribution-card" aria-labelledby="distribution-chart-title"><div class="chart-title"><div><span class="card-kicker">Distribuição de notas</span><h2 id="distribution-chart-title">Composição simulada</h2></div></div><div class="distribution-chart" id="chart-dist" role="img" aria-label="Distribuição de notas de 1 a 5."></div><p class="chart-caption" id="cap-dist">Percentuais fictícios para demonstrar leitura de tendências.</p></section>
+          </div>
+          <section class="needs-section" aria-labelledby="needs-title"><div class="section-heading"><div><div class="eyebrow">Síntese agregada</div><h2 id="needs-title">Necessidades em observação</h2></div><p>Itens simulados para exemplificar como uma equipe institucional poderia iniciar uma leitura responsável, sem expor respostas individuais.</p></div><div class="needs-list" id="needs-list"></div></section>
+          <section class="dashboard-cta"><div><div class="eyebrow">Próxima camada do protótipo</div><h2>Explore recomendações simuladas e o estado de revisão humana.</h2></div><button class="button button-primary" type="button" data-route="recommendations">Ver recomendações →</button></section>
+        </section>
+      </div>
+
+      <!-- RECOMENDAÇÕES -->
+      <div data-view="recommendations" hidden>
+        <section class="recommendations-page section-shell">
+          <div class="recommendation-header">
+            <div><div class="eyebrow">Camada futura do produto</div><h1>Recomendações demonstrativas</h1><p>Uma proposta visual para transformar tendências agregadas em sugestões que precisam de contexto e revisão humana.</p></div>
+            <div class="simulation-stamp"><span aria-hidden="true">💡</span><span>Demonstração<br /><strong>sem IA conectada</strong></span></div>
+          </div>
+          <div class="recommendation-intro"><span aria-hidden="true">📖</span><p>As recomendações abaixo são exemplos locais. Elas não foram geradas por inteligência artificial, não se baseiam em documentos institucionais e não devem orientar decisões reais.</p></div>
+          <div class="recommendation-list" id="rec-list"></div>
+          <section class="recommendation-cta"><div><div class="eyebrow">Ver a origem da leitura</div><h2>Conheça a visualização institucional simulada.</h2></div><button class="button button-quiet" type="button" data-route="dashboard">Ir para o painel →</button></section>
+        </section>
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-intro">
+          <span class="brand-wordmark"><strong>Orienta</strong><em>IF</em></span>
+          <p>Protótipo de tecnologia educacional para apoiar uma escuta mais organizada e melhorias orientadas por evidências.</p>
+        </div>
+        <div class="footer-links" aria-label="Informações do projeto">
+          <span class="footer-label">Informações</span>
+          <button type="button" data-route="about">Como funciona ↗</button>
+          <button type="button" data-route="about">Sobre anonimato ↗</button>
+          <button type="button" data-route="dashboard">Visão demonstrativa ↗</button>
+        </div>
+        <div class="prototype-note">
+          <span class="footer-label">Estado do produto</span>
+          <p><strong>Protótipo demonstrativo.</strong> Não realiza coleta institucional nem análise por inteligência artificial.</p>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>Orienta IF · interface conceitual</span>
+        <span>Dados exibidos são demonstrativos</span>
+      </div>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -65,6 +65,14 @@ const distDst = path.join(releaseDir, 'dist')
 fs.rmSync(distDst, { recursive: true, force: true })
 fs.cpSync(distSrc, distDst, { recursive: true })
 
+// Versão HTML puro (abre com duplo clique, sem servidor)
+const vanillaSrc = path.join(root, 'vanilla')
+if (fs.existsSync(path.join(vanillaSrc, 'index.html'))) {
+  const vanillaDst = path.join(releaseDir, 'vanilla');
+  fs.rmSync(vanillaDst, { recursive: true, force: true });
+  fs.cpSync(vanillaSrc, vanillaDst, { recursive: true });
+}
+
 fs.writeFileSync(
   path.join(releaseDir, 'INICIAR.sh'),
   `#!/bin/sh\ncd "$(dirname "$0")"\n./node servidor.cjs\n`,

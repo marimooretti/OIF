@@ -105,10 +105,21 @@ const candidatosDist = [
   path.join(process.cwd(), 'dist'),
 ]
 const pastaDist = candidatosDist.find((p) => fs.existsSync(path.join(p, 'index.html')))
+// Versão HTML puro (vanilla/): acessível em /vanilla quando a pasta existir.
+const candidatosVanilla = [
+  path.join(__dirname, '../vanilla'),
+  path.join(path.dirname(process.argv[1] || ''), 'vanilla'),
+  path.join(process.cwd(), 'vanilla'),
+]
+const pastaVanilla = candidatosVanilla.find((p) => fs.existsSync(path.join(p, 'index.html')))
+if (pastaVanilla) {
+  app.use('/vanilla', express.static(pastaVanilla))
+  console.log(`Versão HTML puro servida em /vanilla de: ${pastaVanilla}`)
+}
 if (pastaDist) {
   app.use(express.static(pastaDist))
-  // SPA fallback: qualquer rota não-/api devolve o index.html
-  app.get(/^(?!\/api).*/, (_req, res) => {
+  // SPA fallback: qualquer rota não-/api e não-/vanilla devolve o index.html
+  app.get(/^(?!\/api|\/vanilla).*/, (_req, res) => {
     res.sendFile(path.join(pastaDist, 'index.html'))
   })
   console.log(`Front estático servido de: ${pastaDist}`)
